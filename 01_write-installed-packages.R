@@ -2,7 +2,7 @@
 #' output: github_document
 #' ---
 
-# ' See all your installed packages
+#' See all your installed packages
 
 library(tidyverse)
 ## create a data frame of your installed packages

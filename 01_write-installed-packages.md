@@ -3,9 +3,10 @@
 joselynchavez
 2020-01-27
 
-``` r
-# ' See all your installed packages
+See all your installed
+    packages
 
+``` r
 library(tidyverse)
 ```
 
