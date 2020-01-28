@@ -11,7 +11,7 @@
 ## use installed.packages() to get all installed packages
 ## if you like working with data frame or tibble, make it so right away!
 ## remember to use View(), dplyr::glimpse(), or similar to inspect
-
+library(tidyverse)
 pkgs <- as_tibble(installed.packages())
 
 ## how many packages?
@@ -25,17 +25,17 @@ nrow(pkgs)
 ##   * what proportion need compilation?
 ##   * how break down re: version of R they were built on
 
-pkgs %>% count(LibPath, Priority)
-
-pkgs %>%
-  count(NeedsCompilation) %>%
-  mutate(prop = n/sum(n))
-
-pkgs %>%
-  count(Built) %>%
-  mutate(prop = n/sum(n))
-
-# observe that you probably have a number of packages built in one version and
+# pkgs %>% count(LibPath, Priority)
+#
+# pkgs %>%
+#   count(NeedsCompilation) %>%
+#   mutate(prop = n/sum(n))
+#
+# pkgs %>%
+#   count(Built) %>%
+#   mutate(prop = n/sum(n))
+#
+# # observe that you probably have a number of packages built in one version and
 # other in recent version there are packages that probably have not been updated
 # and remain in previous R version
 
@@ -44,10 +44,10 @@ pkgs %>%
 # data %>% count(var)
 # data %>% count(var1, var2)
 # data %>% count(var) %>% mutate(prop = n / sum(n))
-
-data %>% count(NeedsCompilation)
-data %>% count(NeedsCompilation) %>% mutate(prop = n/sum(n))
-
+#
+# data %>% count(NeedsCompilation)
+# data %>% count(NeedsCompilation) %>% mutate(prop = n/sum(n))
+#
 #' Reflections
 
 ## reflect on ^^ and make a few notes to yourself; inspiration
