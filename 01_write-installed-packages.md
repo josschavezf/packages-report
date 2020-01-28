@@ -35,3 +35,19 @@ pkgs <- as.data.frame(installed.packages())
 
 pkgs <- dplyr::as_tibble(pkgs %>% select(Package, LibPath, Version, Priority,  Built))
 ```
+
+Export your data
+
+``` r
+## write this data frame to data/installed-packages.csv
+## hint: readr::write_csv() or write.table()
+## idea: try using here::here() to create the file path
+
+library(here)
+```
+
+    ## here() starts at /Users/joselynchavez/Documents/rstudioconf2020/packages-report
+
+``` r
+# readr::write_csv(pkgs, path = here::here("data", "installed-packages.csv"))
+```

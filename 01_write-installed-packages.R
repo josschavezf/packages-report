@@ -26,4 +26,4 @@ pkgs <- dplyr::as_tibble(pkgs %>% select(Package, LibPath, Version, Priority,  B
 ## idea: try using here::here() to create the file path
 
 library(here)
-readr::write_csv(pkgs, path = here::here("data", "installed-packages.csv"))
+# readr::write_csv(pkgs, path = here::here("data", "installed-packages.csv"))
